@@ -1,8 +1,8 @@
 :root {
     --primary-color: #FAF9F9;
-    --bg-color: #B3ABB2;
+    --bg-color: #353C47;
     --accent-color: #640b43;
-    --sec-accent-color: #353C47;
+    --sec-accent-color: #B3ABB2;
     --ter-accent-color: #E1AB5F;
     --spacing: 10px;
     --padding: 20px;
@@ -130,7 +130,7 @@ header nav ul {
     gap: var(--spacing);
     width: 100%;
     justify-content: space-around;
-    color: var(--sec-accent-color);
+    color: var(--primary-color);
     font-weight: 800;
 }
 
@@ -155,7 +155,7 @@ header nav ul {
 .hero div h2 {
     font-size: 2.3rem;
     margin-bottom: 1rem;
-    color: var(--sec-accent-color);
+    color: var(--bg-color);
 }
 
 .boton {
@@ -240,7 +240,7 @@ header nav ul {
     justify-content: center;
     height: 100px;
     background-color: var(--accent-color);
-    color: var(--bg-color);
+    color: var(--primary-color);
 }
 
 .destacado h2 {
