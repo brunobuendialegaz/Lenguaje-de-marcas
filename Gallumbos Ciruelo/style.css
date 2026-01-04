@@ -1,15 +1,18 @@
 :root {
-    --primary-color: #faffff;
-    --bg-color: #2d263c;
-    --accent-color: #a1a5b0;
-    --sec-accent-color: #ca193c;
+    --primary-color: #FAF9F9;
+    --bg-color: #B3ABB2;
+    --accent-color: #640b43;
+    --sec-accent-color: #353C47;
+    --ter-accent-color: #E1AB5F;
     --spacing: 10px;
     --padding: 20px;
     --border-radius: 8px;
-    --shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    --shadow: rgba(153, 46, 240, 0.4) 5px 5px, rgba(153, 46, 240, 0.3) 10px 10px, rgba(153, 46, 240, 0.2) 15px 15px, rgba(153, 46, 240, 0.1) 20px 20px, rgba(153, 46, 240, 0.05) 25px 25px;
 
 
 }
+
+
 
 /* Estilos generales de la pagina */
 
@@ -31,7 +34,7 @@ a {
 }
 
 a:hover {
-    color: var(--sec-accent-color);
+    color: var(--primary-color);
 }
 
 html {
@@ -43,47 +46,62 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     background-color: var(--bg-color);
-    color: var(--primary-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", sans-serif;
   font-weight: 700; 
-  color: var(--accent-color);
+  color: var(--sec-accent-color);
 }
 
 /* Estilos del header */
 
+#menu {
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--accent-color);
     padding: 20px 5%;
-    height: 100px;
-    border-bottom: 3px solid var(--sec-accent-color);
+    height: 7vh;
+    min-height: 100px;
     display: flex;
     align-items: center;
     width: 100%;
     padding: var(--padding);
-    box-shadow: var(--shadow);
 }
 
-header img {
+header a {
     flex-basis: 5%;
+    
+}
+
+header a img {
     min-width: 100px;
     max-width: 5%;
     object-fit: contain;
-    padding-left: var(--padding);
 }
 
 .marca {
+    color: var(--primary-color);
     flex-basis: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: var([--padding]);
+    padding-left: var(--padding); /* Sin corchetes */
 }
 
 .marca h1{
     font-size: 1.8rem;
     margin: 0;
+    color: var(--primary-color);
 }
 
 .marca p {
@@ -92,16 +110,17 @@ header img {
 }
 
 .marca span {
-    color: var(--sec-accent-color);
+    color: var(--bg-color);
 }
 
 header nav {
-    background-color: var(--accent-color);
+    color: var(--sec-accent-color);
     flex-basis: 50%;
+    min-width: 500px;
     display: flex;
     justify-content: center;
     padding: var(--padding);
-    border-radius: var(--border-radius);
+
 }
 
 header nav ul {
@@ -109,6 +128,261 @@ header nav ul {
     gap: var(--spacing);
     width: 100%;
     justify-content: space-around;
+    color: var(--primary-color);
+}
+
+/* Estilos del hero */
+
+.hero {
+    
+    height: 93vh;
+    min-height: 600px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-image: url(./assets/unnamed.jpg);
+    background-size: cover;
+    background-position: left;
+    
+
+}
+
+.hero div {
+    padding-left: 60px;
+    align-self: center;
+    text-align: center;
+}
+
+.hero div h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    color: var(--sec-accent-color);
+}
+
+/* Estilos del catalogo */
+
+.catalogo {
+    padding: 60px 5%;
+}
+
+.catalogo h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: var(--padding);
+    max-width: 1900px;
+    margin: 0 auto;
+}
+
+.productos-grid article {
+    border-radius: var(--border-radius);
+    margin: 10px;
+    border: 1px solid var(--sec-accent-color);
+    padding: 15px;
+    min-width: 300px;
+    background-color: var(--primary-color);
+    text-align: center;
+    cursor: pointer;
+}
+
+.productos-grid article h3 {
+    color: var(--accent-color);
+}
+
+.productos-grid img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Estilos del destacado */
+
+.destacado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.destacado h2 {
+    color: var(--primary-color);
+}
+
+/* Estilos del contacto */
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    min-width: 400px;
+    align-items: center;
+
+
+}
+
+.contacto form label {
+    color: var(--sec-accent-color);
+    text-align: left;
+    width: 100%;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.contacto form :is(input, select, textarea) {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.contacto form :is(input, select, textarea):focus {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.contacto form textarea {
+    height: 120px;
+}
+
+.contacto button {
+    width: 20%;
+    height: 30px;
+    margin: 10px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.contacto button:hover  {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+/* Estilos del footer */
+
+footer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: var(--sec-accent-color);
+    color: var(--bg-color);
+}
+
+footer address {
+    flex-basis: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+footer address p {
+    padding-left: 10px;
+
+}
+
+/* media querys , tengo que reconocer que el tema del menu plegable es 99% gemini
+Mi unico merito es haber tenido la idea, o haberla copiado en algun sitio!!*/
+@media (max-width: 1120px) {
+    #menu {
+        display: block;
+    }
+
+    header nav {
+        min-width: auto;
+        display: none;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: var(--accent-color);
+        z-index: 9999;
+    }
+
+    header nav.active {
+        display: flex;
+    }
+
+    header nav ul li a {
+        font-size: 1.2rem;
+    }
+    
+    .marca {
+        flex-basis: 85%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    header {
+        justify-content: space-between;
+        overflow: visible;
+    }
+
+    .marca {
+        flex-basis: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .productos-grid article {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .marca h1 {
+        font-size: 1.4rem;
+    }
+    
+    .marca p {
+        font-size: 0.7rem;
+    }
+
+    .contacto form {
+        width: 90%;
+        min-width: auto;
+    }
+    
+    .hero div {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .hero div h2 {
+        font-size: 1.8rem;
+    }
 }
 
 

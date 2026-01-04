@@ -13,49 +13,48 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="icon" href="./assets/logo.jpg" type="image/jpg">
+    <link rel="icon" href="./assets/Logo.png" type="image/png">
     <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
     <header>
+        <a href="#inicio"><img src="./assets/Logo.png" alt="logo calzoncillos C"></a>
 
-        <img src="./assets/logo.jpg" alt="logo calzoncillos C">
         <div class="marca">
             <h1>Gallumbos Ciruelo</h1>
             <p>Desde Murcia, con amor, <span>comodidad que se lleva por dentro.</span></p>
         </div>
+        <img src="./assets/Menu.png" id="menu" alt="Abrir Menu">
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Colección</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Sobre nosotros</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#catalogo">Productos</a></li>
+                <li><a href="#catalogo">Colección</a></li>
+                <li><a href="#contacto-id">Contacto</a></li>
+                <li><a href="#sobreNosotros">Sobre nosotros</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="hero">
-            <h2>Gallumbos Ciruelo, de la huerta murciana, a tus limones.</h2>
+        <section class="hero" id="inicio">
             <div>
+                <h2>Gallumbos Ciruelo, de la huerta murciana, a tus limones.</h2>
                 <p>Redefinimos la sujeción, comodidad y estilo que tus intimidades merecen.</p>
                 <p>Diseño, fabricación y distribución desde Murcia, <span>porque un Chino no es capaz de entender lo que
                         siente un murciano...</span></p>
                 <div class="boton"><a href="#contacto-id">Más info</a></div>
             </div>
-
-            <figure><img src="" alt=""></figure>
         </section>
 
-        <section class="catalogo">
+        <section class="catalogo" id="catalogo">
             <h2>Nuestros catalogo de limoneros</h2>
 
             <div class="productos-grid">
                 <article>
                     <figure>
-                        <img src="" alt="Calzoncillo">
+                        <img src="./assets/gallumbos 1.webp" alt="Calzoncillo">
                         <figcaption>Modelo Clasico - Algodon Premium</figcaption>
                     </figure>
                     <h3>Modelo Básico</h3>
@@ -65,7 +64,7 @@
 
                 <article>
                     <figure>
-                        <img src="" alt="Calzoncillo">
+                        <img src="./assets/gallumbos 1.webp" alt="Calzoncillo">
                         <figcaption>Modelo Clasico - Algodon Premium</figcaption>
                     </figure>
                     <h3>Modelo Básico</h3>
@@ -75,7 +74,7 @@
 
                 <article>
                     <figure>
-                        <img src="" alt="Calzoncillo">
+                        <img src="./assets/gallumbos 1.webp" alt="Calzoncillo">
                         <figcaption>Modelo Clasico - Algodon Premium</figcaption>
                     </figure>
                     <h3>Modelo Básico</h3>
@@ -85,7 +84,7 @@
 
                 <article>
                     <figure>
-                        <img src="" alt="Calzoncillo">
+                        <img src="./assets/gallumbos 1.webp" alt="Calzoncillo">
                         <figcaption>Modelo Clasico - Algodon Premium</figcaption>
                     </figure>
                     <h3>Modelo Básico</h3>
@@ -95,7 +94,17 @@
 
                 <article>
                     <figure>
-                        <img src="" alt="Calzoncillo">
+                        <img src="./assets/gallumbos 1.webp" alt="Calzoncillo">
+                        <figcaption>Modelo Clasico - Algodon Premium</figcaption>
+                    </figure>
+                    <h3>Modelo Básico</h3>
+                    <p>Fabricado en algodon por una yaya huertana</p>
+                    <span class="precio">19.99€</span>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="./assets/gallumbos 1.webp" alt="Calzoncillo">
                         <figcaption>Modelo Clasico - Algodon Premium</figcaption>
                     </figure>
                     <h3>Modelo Básico</h3>
@@ -107,18 +116,18 @@
 
         </section>
 
-        <article class="destadaco">
+        <article class="destacado">
             <h2>¿Por qué elegirnos?</h2>
             <p>Fabricado en Murcia con un 100% de algodon natural, hecho en la huerta.</p>
         </article>
 
         <section class="contacto" id="contacto-id">
-            <h2>contacto</h2>
+            <h2>Contacto</h2>
             <form action="#">
-                <label for="nombre">Nombre</label>
+                <label for="nombre">Nombre:</label>
                 <input type="text" name="nombre-usuario" id="nombre" required>
 
-                <label for="email">Correo electrónico</label>
+                <label for="email">Correo electrónico:</label>
                 <input type="email" name="email-usuario" id="email" required>
 
                 <label for="motivo">Tipo de consulta:</label>
@@ -128,7 +137,7 @@
                     <option value="otros">Otros</option>
                 </select>
 
-                <label for="mensaje">mensaje</label>
+                <label for="mensaje">Mensaje:</label>
                 <textarea name="mensaje-usuario" id="mensaje"></textarea>
 
                 <button type="submit">Enviar</button>
@@ -152,6 +161,7 @@
         </p>
 
     </footer>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
