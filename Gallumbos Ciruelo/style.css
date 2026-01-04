@@ -8,6 +8,7 @@
     --padding: 20px;
     --border-radius: 8px;
     --shadow: rgba(153, 46, 240, 0.4) 5px 5px, rgba(153, 46, 240, 0.3) 10px 10px, rgba(153, 46, 240, 0.2) 15px 15px, rgba(153, 46, 240, 0.1) 20px 20px, rgba(153, 46, 240, 0.05) 25px 25px;
+    --product-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 
 
 }
@@ -46,6 +47,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     background-color: var(--bg-color);
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -67,15 +69,16 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
-    background-color: var(--accent-color);
+    z-index: 100;
     padding: 20px 5%;
-    height: 7vh;
+    min-height: 7vh;
     min-height: 100px;
     display: flex;
     align-items: center;
     width: 100%;
     padding: var(--padding);
+    background-color: var(--bg-color);
+    box-shadow: var(--product-shadow);
 }
 
 header a {
@@ -110,11 +113,10 @@ header a img {
 }
 
 .marca span {
-    color: var(--bg-color);
+    color: var(--);
 }
 
 header nav {
-    color: var(--sec-accent-color);
     flex-basis: 50%;
     min-width: 500px;
     display: flex;
@@ -128,23 +130,20 @@ header nav ul {
     gap: var(--spacing);
     width: 100%;
     justify-content: space-around;
-    color: var(--primary-color);
+    color: var(--sec-accent-color);
+    font-weight: 800;
 }
 
 /* Estilos del hero */
 
 .hero {
-    
-    height: 93vh;
-    min-height: 600px;
+    min-height: 100vh;
     display: flex;
     justify-content: left;
     align-items: center;
-    background-image: url(./assets/unnamed.jpg);
+    background-image: url(./assets/background.png);
     background-size: cover;
     background-position: left;
-    
-
 }
 
 .hero div {
@@ -157,6 +156,10 @@ header nav ul {
     font-size: 2.3rem;
     margin-bottom: 1rem;
     color: var(--sec-accent-color);
+}
+
+.boton {
+    margin-top: 10px;
 }
 
 /* Estilos del catalogo */
@@ -183,7 +186,6 @@ header nav ul {
     border-radius: var(--border-radius);
     margin: 10px;
     border: 1px solid var(--sec-accent-color);
-    padding: 15px;
     min-width: 300px;
     background-color: var(--primary-color);
     text-align: center;
@@ -195,10 +197,38 @@ header nav ul {
 }
 
 .productos-grid img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    aspect-ratio: 3/4;
     display: block;
-    margin: 0 auto 10px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: var(--product-shadow);
+    transition: transform 0.4s ease;
+}
+
+.productos-grid img:hover {
+    transform: scale(1.1); 
+}
+
+.productos-grid figure {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.productos-grid figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: var(--primary-color);
+    text-align: center;
+    padding: 30px 10px 10px 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    z-index: 2;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
 }
 
 /* Estilos del destacado */
@@ -314,16 +344,18 @@ Mi unico merito es haber tenido la idea, o haberla copiado en algun sitio!!*/
         top: 100px;
         left: 0;
         width: 100%;
-        background-color: var(--accent-color);
-        z-index: 9999;
+        z-index: 101;
     }
 
     header nav.active {
         display: flex;
+        background-color: var(--bg-color);
     }
 
-    header nav ul li a {
+    header nav ul{
         font-size: 1.2rem;
+        color: var(--primary-color);
+        font-weight: 400;
     }
     
     .marca {
@@ -344,10 +376,15 @@ Mi unico merito es haber tenido la idea, o haberla copiado en algun sitio!!*/
     header {
         justify-content: space-between;
         overflow: visible;
+        box-shadow: none;
     }
 
     .marca {
         flex-basis: auto;
+    }
+
+    .hero {
+    background-position: center;
     }
 }
 
