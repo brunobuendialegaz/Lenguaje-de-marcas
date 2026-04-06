@@ -8,70 +8,81 @@
     <meta name="description"
         content="Web de viajes, disponibilidad absoluta a todos los destinos, niños pagan, adultos no.">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
     <title>Viajes Delmiro</title>
 </head>
 
 <body>
 
     <header class="nav-bar">
-        <img src="" alt="logo">
-        <h1>Viajes Delmiro</h1>
+        <a href="#inicio"><img src="" alt="logo"></a>
+        <a href="#inicio">
+            <h1>Viajes Delmiro</h1>
+        </a>
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Destinos</a></li>
-                <li><a href="#">Información</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#destinos">Destinos</a></li>
+                <li><a href="#info">Información</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="hero_Section" id="inicio">
-            <img src="" alt="hero imagen">
-            <h2>Viajes Delmiro, no paga el adulto, paga su pupilo...</h2>
-            <p>La revolución de los viajes, +18 no pagan, pagan sus pajes...</p>
-            <a href="#">Reserva ya!!</a>
+            <div class="glass-box">
+                <h2>Viajes Delmiro, no paga el adulto, paga su pupilo...</h2>
+                <p>La revolución de los viajes, +18 no pagan, pagan sus pajes...</p>
+                <a href="#contacto">Reserva ya!!</a>
+            </div>
         </section>
-        <section class="destinos">
+        <section class="destinos" id="destinos">
             <h2>Destinos</h2>
-            <article class="tarjeta_Destino">
-                <h3>Pais o ciudad</h3>
-                <img src="" alt="foto_Destino">
-                <p>Descripción del destino</p>
-                <a href="#">Pagar viaje</a>
-            </article>
-            <article class="tarjeta_Destino">
-                <h3>Pais o ciudad</h3>
-                <img src="" alt="foto_Destino">
-                <p>Descripción del destino</p>
-                <a href="#">Pagar viaje</a>
-            </article>
-            <article class="tarjeta_Destino">
-                <h3>Pais o ciudad</h3>
-                <img src="" alt="foto_Destino">
-                <p>Descripción del destino</p>
-                <a href="#">Pagar viaje</a>
-            </article>
-            <article class="tarjeta_Destino">
-                <h3>Pais o ciudad</h3>
-                <img src="" alt="foto_Destino">
-                <p>Descripción del destino</p>
-                <a href="#">Pagar viaje</a>
-            </article>
-            <article class="tarjeta_Destino">
-                <h3>Pais o ciudad</h3>
-                <img src="" alt="foto_Destino">
-                <p>Descripción del destino</p>
-                <a href="#">Pagar viaje</a>
-            </article>
-            <article class="tarjeta_Destino">
-                <h3>Pais o ciudad</h3>
-                <img src="" alt="foto_Destino">
-                <p>Descripción del destino</p>
-                <a href="#">Pagar viaje</a>
-            </article>
+            <div class="tarjetas">
+                <article class="tarjeta_Destino">
+                    <h3>Pais o ciudad</h3>
+                    <img src="" alt="foto_Destino">
+                    <p>Descripción del destino</p>
+                    <a href="#">Pagar viaje</a>
+                </article>
+                <article class="tarjeta_Destino">
+                    <h3>Pais o ciudad</h3>
+                    <img src="" alt="foto_Destino">
+                    <p>Descripción del destino</p>
+                    <a href="#">Pagar viaje</a>
+                </article>
+                <article class="tarjeta_Destino">
+                    <h3>Pais o ciudad</h3>
+                    <img src="" alt="foto_Destino">
+                    <p>Descripción del destino</p>
+                    <a href="#">Pagar viaje</a>
+                </article>
+                <article class="tarjeta_Destino">
+                    <h3>Pais o ciudad</h3>
+                    <img src="" alt="foto_Destino">
+                    <p>Descripción del destino</p>
+                    <a href="#">Pagar viaje</a>
+                </article>
+                <article class="tarjeta_Destino">
+                    <h3>Pais o ciudad</h3>
+                    <img src="" alt="foto_Destino">
+                    <p>Descripción del destino</p>
+                    <a href="#">Pagar viaje</a>
+                </article>
+                <article class="tarjeta_Destino">
+                    <h3>Pais o ciudad</h3>
+                    <img src="" alt="foto_Destino">
+                    <p>Descripción del destino</p>
+                    <a href="#">Pagar viaje</a>
+                </article>
+            </div>
         </section>
-        <section class="Informacion">
+        <section class="informacion" id="info">
             <h2>¿Como funciona nuestra promoción? Presta atención...</h2>
             <h3>Condiciones:</h3>
             <ul>
@@ -80,7 +91,7 @@
                 <li>Disfruta de tu ciudad de vacaciones.</li>
             </ul>
         </section>
-        <section class="contacto">
+        <section class="contacto" id="contacto">
             <h2>Contacto de niños.</h2>
             <form action="contacto">
                 <label for="nombre">Nombre:</label>
@@ -95,8 +106,10 @@
     </main>
     <footer>
         <p>Viajes Delmiro © 2026</p>
+        <a href="info-clientes@viajesdelmiro.com">
+            <p>Email: info-clientes@viajesdelmiro.com</p>
+        </a>
         <p>Tlf: 697161395</p>
-        <p>Email: info-clientes@viajesdelmiro.com</p>
     </footer>
 </body>
 
