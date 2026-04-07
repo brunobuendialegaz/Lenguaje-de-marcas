@@ -104,7 +104,14 @@ nav a{
     color: var(--color-background);
     padding: 0.5rem 1rem;
     border-radius: var(--border-radius);
+    transition: all 0.3s ease;
 
+}
+
+.hero_Section a:hover{
+    background-color: orangered;
+    filter: brightness(1.2);
+    transform: scale(1.05);
 }
 
 .destinos{
