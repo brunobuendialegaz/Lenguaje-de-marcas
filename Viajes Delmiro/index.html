@@ -20,7 +20,7 @@
 <body>
 
     <header class="nav-bar">
-        <a href="#inicio"><img src="" alt="logo"></a>
+        <a href="#inicio"><img src="/resources/images/logo.png" alt="logo"></a>
         <a href="#inicio">
             <h1>Viajes Delmiro</h1>
         </a>
@@ -45,40 +45,40 @@
             <h2>Destinos</h2>
             <div class="tarjetas">
                 <article class="tarjeta_Destino">
-                    <h3>Pais o ciudad</h3>
-                    <img src="" alt="foto_Destino">
+                    <h3>Mikonos</h3>
+                    <img src="/resources/images/mikonos.jpg" alt="foto_Mikonos">
                     <p>Descripción del destino</p>
-                    <a href="#">Pagar viaje</a>
+                    <a href="#contacto">Pagar viaje</a>
                 </article>
                 <article class="tarjeta_Destino">
-                    <h3>Pais o ciudad</h3>
-                    <img src="" alt="foto_Destino">
+                    <h3>Ciudad de México</h3>
+                    <img src="/resources/images/ciudad_de_mexico.webp" alt="foto_Destino">
                     <p>Descripción del destino</p>
-                    <a href="#">Pagar viaje</a>
+                    <a href="#contacto">Pagar viaje</a>
                 </article>
                 <article class="tarjeta_Destino">
-                    <h3>Pais o ciudad</h3>
-                    <img src="" alt="foto_Destino">
+                    <h3>Estambul</h3>
+                    <img src="/resources/images/estambul.jpg" alt="foto_Destino">
                     <p>Descripción del destino</p>
-                    <a href="#">Pagar viaje</a>
+                    <a href="#contacto">Pagar viaje</a>
                 </article>
                 <article class="tarjeta_Destino">
-                    <h3>Pais o ciudad</h3>
-                    <img src="" alt="foto_Destino">
+                    <h3>Liubliana, Eslovenia</h3>
+                    <img src="/resources/images/liubliana_eslovenia.jpg" alt="foto_Destino">
                     <p>Descripción del destino</p>
-                    <a href="#">Pagar viaje</a>
+                    <a href="#contacto">Pagar viaje</a>
                 </article>
                 <article class="tarjeta_Destino">
-                    <h3>Pais o ciudad</h3>
-                    <img src="" alt="foto_Destino">
+                    <h3>Roma</h3>
+                    <img src="/resources/images/roma.jpg" alt="foto_Destino">
                     <p>Descripción del destino</p>
-                    <a href="#">Pagar viaje</a>
+                    <a href="#contacto">Pagar viaje</a>
                 </article>
                 <article class="tarjeta_Destino">
-                    <h3>Pais o ciudad</h3>
-                    <img src="" alt="foto_Destino">
+                    <h3>Tokio</h3>
+                    <img src="/resources/images/tokio.webp" alt="foto_Destino">
                     <p>Descripción del destino</p>
-                    <a href="#">Pagar viaje</a>
+                    <a href="#contacto">Pagar viaje</a>
                 </article>
             </div>
         </section>
@@ -100,7 +100,7 @@
                 <input type="email" id="email">
                 <label for="mensaje">Mensaje:</label>
                 <textarea name="mensaje" id="mensaje"></textarea>
-                <button type="submit">Info para padres</button>
+                <button type="submit" id="btn_enviar">Info para padres</button>
             </form>
         </section>
     </main>
@@ -111,6 +111,16 @@
         </a>
         <p>Tlf: 697161395</p>
     </footer>
+    <script>
+        const boton = document.getElementById('btn_enviar');
+
+        boton.addEventListener('click', function (event) {
+            // Esto evita que el formulario intente enviarse de verdad y recargue la página
+            event.preventDefault();
+
+            alert("Mensaje recibido, no te preocupes chiquillo, tramitamos tu viajecillo...");
+        });
+    </script>
 </body>
 
 </html>

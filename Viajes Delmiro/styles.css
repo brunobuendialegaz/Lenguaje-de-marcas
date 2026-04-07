@@ -14,6 +14,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 
 body{
     font-family: "Lexend Deca", "roboto", sans-serif;
@@ -24,6 +28,7 @@ body{
 a{
     text-decoration: none;
     color: var(--color-primario);
+    transition: all 0.3s ease;
 }
 
 a:hover{
@@ -48,7 +53,7 @@ ul{
 }
 
 .nav-bar img {
-    height: 100px;
+    height: 60px;
 }
 
 .nav-bar h1{
@@ -132,6 +137,11 @@ nav a{
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     gap: 1rem;
     padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta_Destino:hover{ 
+    transform: translateY(-10px);
 }
 
 .tarjeta_Destino img{
@@ -189,7 +199,13 @@ form button{
     padding: 0.5rem 1rem;
     border-radius: var(--border-radius);
     margin-top: 0.8rem;
+    transition: all 0.3s ease;
+}
 
+form button:hover{
+    background-color: orangered;
+    filter: brightness(1.2);
+    transform: scale(1.05);
 }
 
 form input:focus, form textarea:focus{
